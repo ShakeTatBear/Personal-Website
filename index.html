@@ -15,12 +15,14 @@
 
   <!--hero section start-->
   <div class="hero" id="home">
+    <img src="backgroundimage4.jpg" alt="Tech Background" class="image-rotate">
     <nav>
       <h2 class="hero-logo">Portfo<span>lio</span></h2>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#service">Services & Skills</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#upcomingprojects">Upcoming Projects</a></li>
       </ul>
       <a href="https://www.youtube.com/channel/UCerGQCBLMtyKpd8VOzZarFQ" class="btn">Subscribe</a>
     </nav>
@@ -46,7 +48,19 @@
     <script></script>
     <div class="main">
       <div class="low-poly-background"></div>
-      <img class="img1" src="4.jpg" alt="">
+      <img class="img1" src="4.jpg" alt="" onclick="changeImage()">
+      <script>
+        $(document).ready(function() {
+          $('.img1').click(function() {
+            var currentSrc = $(this).attr('src');
+            if (currentSrc.includes('4.jpg')) {
+              $(this).attr('src', '3.jpeg'); // Change to the path of the new image
+            } else {
+              $(this).attr('src', '4.jpg'); // Change back to the original image when clicked again
+            }
+          });
+        });
+      </script>
       <div class="about-text">
         <h2>About Me</h2>
         <h5>Developer <span>and Designer</span></h5>
@@ -84,7 +98,7 @@
     });
 
 // Number of particles
-const numParticles = 250;
+const numParticles = 1500;
 const aboutParticles = document.querySelector('.about .particles');
 
 // Create particles for the about section only
@@ -127,7 +141,7 @@ function createParticle() {
   <section class="service" id="service">
 
     <div class="title">
-      <h2>Services & Skills</h2>
+      <h2>Services</h2>
     </div>
     
     <div class="box">
@@ -141,7 +155,7 @@ function createParticle() {
             it needs to be fast as possible.
           </p>
           <p style="text-align: center;">
-            <a class="button" href="#">Read More</a>
+            <a class="button" href="#">Explore Projects</a>
           </p>
         </div>
       </div>
@@ -155,7 +169,7 @@ function createParticle() {
             Captivating graphic design solutions tailored to your brand's identity and audience.
           </p>
           <p style="text-align: center;">
-            <a class="button" href="#">Read More</a>
+            <a class="button" href="#">Explore Projects</a>
           </p>
         </div>
       </div>
@@ -168,7 +182,7 @@ function createParticle() {
             Crafting seamless and intuitive applications for all platforms. Building robust and scalable software solutions with clean and efficient code.
           </p>
           <p style="text-align: center;">
-            <a class="button" href="#">Read More</a>
+            <a class="button" href="#">Explore Projects</a>
           </p>
         </div>
       </div>
@@ -181,7 +195,7 @@ function createParticle() {
             Creating high-quality audio and video content, including music production, sound design, and audio/video editing.
           </p>
           <p style="text-align: center;">
-            <a class="button" href="#">Read More</a>
+            <a class="button" href="#">Explore Projects</a>
           </p>
         </div>
       </div>
@@ -194,7 +208,7 @@ function createParticle() {
             Utilizing advanced analytics tools to derive insights and make data-driven decisions.
           </p>
           <p style="text-align: center;">
-            <a class="button" href="#">Read More</a>
+            <a class="button" href="#">Explore Projects</a>
           </p>
         </div>
       </div>
@@ -207,7 +221,7 @@ function createParticle() {
             Designing and implementing robust networking solutions tailored to your organization's needs.
           </p>
           <p style="text-align: center;">
-            <a class="button" href="#">Read More</a>
+            <a class="button" href="#">Explore Projects</a>
           </p>
         </div>
       </div>
