@@ -30,10 +30,11 @@
       <h1>Josh Brown</h1>
       <h3>Welcome to my page - enter your email to contact me!
       </h3>
-      <div class="newsletter">
-        <form action="/submit-email" method="POST">
+      <div class="newsletter" id="newsletter">
+        <form id="emailForm" action="/submit-email" method="POST">
           <input type="email" id="email" name="email" placeholder="Enter your email" required>
           <button type="submit" class="btn">Submit</button>
+          
         </form>
       </div>
     </div>
@@ -55,7 +56,7 @@
           and frameworks to bring ideas to life. <br></br> Simultaneously, in networking, I delve deep into the intricacies of designing and implementing robust 
           connectivity solutions. From configuring routers and switches to optimizing network performance, I immerse myself in understanding network topologies and protocols.
            Moreover, I'm keenly interested in automation techniques, exploring ways to streamline network management processes through scripting and automation tools, which 
-           not only enhance efficiency but also deepen my understanding of networking fundamentals. Computer Engineering graduate open to work software or hardware engineering positions!
+           not only enhance efficiency but also deepen my understanding of networking fundamentals. I'm open to work any software or hardware engineering positions!
           
         </p>
         <button type="button">Let's Talk</button>
@@ -83,7 +84,7 @@
     });
 
 // Number of particles
-const numParticles = 500;
+const numParticles = 250;
 const aboutParticles = document.querySelector('.about .particles');
 
 // Create particles for the about section only
@@ -124,7 +125,8 @@ function createParticle() {
   <!---services section-->
 
   <section class="service" id="service">
-    <div class="title" onclick="toggleCards()">
+
+    <div class="title">
       <h2>Services & Skills</h2>
     </div>
     

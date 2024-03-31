@@ -23,19 +23,11 @@ form.addEventListener('submit', function(event) {
   .then(response => response.json())
   .then(data => {
     // Display confirmation message on the website
-    const confirmationMessage = document.createElement('p');
-    confirmationMessage.textContent = data.message;
-    form.appendChild(confirmationMessage);
-    
-    // Remove confirmation message after 3 seconds with a fade out effect
-    setTimeout(() => {
-      confirmationMessage.style.opacity = 0;
-      confirmationMessage.style.transition = 'opacity 1s';
-    }, 1000);
-    
-    setTimeout(() => {
-      confirmationMessage.remove();
-    }, 2000);
+    const thanksMessage = document.createElement('p');
+    thanksMessage.textContent = "Thanks! I'll contactly you shortly!";
+    newsletter.parentNode.replaceChild(thanksMessage, newsletter);
+    thanksMessage.classList.add('thanks-message')
+ 
   })
   .catch(error => console.error('Error:', error));
 });
@@ -55,43 +47,5 @@ document.querySelectorAll('a [href^="#"]').forEach(anchor => {
     });
   });
 });
-
-//revolving door animation
-function handleIntersection(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    } else {
-      entry.target.classList.remove('visible');
-    }
-  });
-}
-
-// Create a new Intersection Observer
-const observer = new IntersectionObserver(handleIntersection, {
-  threshold: 0.5 // Trigger when 50% of the skills section is in the viewport
-});
-
-// Target the skills section
-const skillsSection = document.querySelector('.skills');
-
-// Start observing the skills section
-observer.observe(skillsSection);
-
-//particles for background
-
-// Function to toggle card visibility
-function toggleCards() {
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(card => {
-    card.classList.toggle('hidden'); // Toggle the 'hidden' class
-  });
-}
-
-//toggle cards
-document.getElementById('toggleCardsButton').addEventListener('click', function() {
-  toggleCards();
-});
-
 
 
