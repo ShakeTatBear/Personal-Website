@@ -22,7 +22,7 @@ nav {
   padding-right: 8%;
 }
 
-.logo {
+.hero-logo {
   color: white;
   font-size: 35px;
   letter-spacing: 1px;
@@ -92,92 +92,329 @@ h4 {
 }
 
 .newsletter form {
-  width: 380px;
-  max-width: 100%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .newsletter form input:first-child {
-  display: inline-block;
-  width: 100%;
-  padding: 14px 130px 13px 15px;
+  flex: 1;
+  width: auto;
+  padding: 14px 15px;
   border: 2px solid darkred;
   border-radius: 30px;
+  margin-right: 10px; /* Add some margin to separate the input and button */
 }
 
 .newsletter form input:last-child {
-  position: absolute;
-  display: inline-block;
-  outline: none;
+  padding: 10px 15px;
   border: none;
-  padding: 10px 30px;
   border-radius: 30px;
   background-color: darkred;
-  box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-  top: 6px;
-  right: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.about{
+.low-poly-background {
+  position: fixed; /* Change this to fixed */
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 100px 0px;
-  background-color: #131212;
+  height: 100%;
+  z-index: -1;
+  animation: fluctuate 10s infinite alternate;
 }
 
-.about img{
-  height: auto;
-  width: 430px;
+@keyframes fluctuate {
+    0% {
+        background-color: rgba(0, 0, 0, 0.99); /* Dark background */
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.95); /* Intermediate darkness */
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.92); /* Visible background */
+    }
 }
 
-.about-text{
-  width: 550px;
+.about {
+  padding: 100px 0;
+  color: white; /* Set text color to white */
+  height: 100vh; /* Set height to viewport height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.main{
-  width: 1130px;
-  max-width: 95%;
-  margin: 0 auto;
+.about-text {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 3.0s ease, transform 2.0s ease;
+}
+.about-text.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img1{
+  width: 100%;
+  height: 991px;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Animation */
+@keyframes move {
+  from {
+    transform: translateX(-50vh) rotate(0deg);
+  }
+  to {
+    transform: translateX(0vw) rotate(360deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  75% { opacity: 0.2; }
+  95% { opacity: 1.0; }
+  100% { opacity: 0; }
+}
+
+.about .main {
+  width: 95%;
+  max-width: 1890px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.about-text h2{
-  color: white;
-  font-size: 75px;
+.about img{
+  margin-right: 20px; /* Adjust the margin-right as needed */
+  width: 40%; /* Adjust the width of the image */
+}
+
+.about-text {
+  width: 50%;
+  text-align: center; /* Center align the text */
+}
+
+.about-text h2 {
+  font-size: 4vw; /* Responsive font size based on viewport width */
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 
-.about-text h5{
-  color: white;
-  letter-spacing: 2px;
-  font-size: 22px;
-  margin-bottom: 25px;
+.about-text h5 {
+  font-size: 1.5em; /* Responsive font size based on em units */
+  margin-bottom: 1.5em; /* Adjust margin accordingly */
   text-transform: capitalize;
 }
 
-.about-text p{
-  color: rgb(255, 222, 183);
-  letter-spacing: 1px;
-  line-height: 28px;
-  font-size: 18px;
-  margin-bottom: 45px;
+.about-text p {
+  font-size: 1em; /* Responsive font size based on em units */
+  letter-spacing: 0.05em; /* Adjust letter spacing */
+  line-height: 1.6;
+  margin-bottom: 2em; /* Adjust margin accordingly */
 }
 
-button{
+button {
   background-color: darkred;
   color: white;
   text-decoration: none;
-  border: 15px solid transparent;
+  border: none; /* Remove the border */
   font-weight: bold;
-  padding-inline-start: 13px 30px;
+  padding: 10px 30px;
   border-radius: 30px;
-  transition: .4s;
+  transition: .2s;
 }
 
-button:hover{
-  background-color: transparent;
-  border: 20px solid #131212;
+button:hover {
+  background-color: transparent; /* Change the background color on hover */
+  border: 2px solid darkred; /* Add a border on hover */
   cursor: pointer;
+}
+
+.service {
+  padding: 0px 0;
+  min-height: 100vh; /* Set minimum height to viewport height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Align content vertically */
+  position: relative; /* Add position relative */
+  z-index: 0;
+}
+
+.service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+
+ /* Adjust the brightness to make the image whiter */
+}
+
+@keyframes fluctuate {
+  0% {
+      background-color: rgba(0, 0, 0, 0.99); /* Dark background */
+  }
+  50% {
+      background-color: rgba(0, 0, 0, 0.95); /* Intermediate darkness */
+  }
+  100% {
+      background-color: rgba(0, 0, 0, 0.92); /* Visible background */
+  }
+}
+
+.title {
+  margin-top: 5%;
+  margin-bottom: 50px;
+}
+
+.title:hover{
+  cursor: pointer;
+}
+
+.title h2 {
+  font-size: 80px;
+  color: black;
+  background-color: darkred;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); /* Add a subtle shadow */
+  margin-bottom: 20px;
+}
+
+.standout-title {
+      color: white;
+      background-color: darkred;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+.box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  margin-top: 20px; /* Add margin between card rows */
+}
+
+.card {
+  width: 450px; /* Increase the width of the cards */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increase the box shadow */
+  margin: 0 20px 40px; /* Increase bottom margin to separate cards */
+  padding: 40px; /* Increase padding for better spacing */
+  text-align: center;
+  transition: transform 0.3s; /* Add transition effect */
+  display: initial;
+  opacity: 0; /* Initially hide the cards */
+/* Add transition effect for opacity */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+.card i {
+  font-size: 64px; /* Increase the size of the icon */
+  color: darkred;
+}
+
+.card h5 {
+  font-size: 24px; /* Increase the size of the heading */
+  margin-top: 20px;
+  color: #333; /* Change the color of the heading */
+}
+
+.card .pra {
+  margin-top: 20px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 18px; /* Increase the font size of the paragraph */
+}
+
+.card a.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px; /* Increase the padding of the button */
+  background-color: darkred;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px; /* Increase the font size of the button */
+}
+
+.card a.button:hover {
+  background-color: #960018;
+}
+
+.hidden {
+  transition: opacity 3s;
+  opacity: 1;
+}
+
+.skills {
+  background-color: #131212;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  min-height: 100vh; /* Ensure the section covers at least the viewport height */
+  position: relative; /* Add position relative */
+}
+
+.skills h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.skills-container {
+  opacity: 0; /* Initially hide the skills */
+  transform: translateY(50px); /* Initially move the skills down */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth animation */
+}
+
+.skills.visible .skills-container {
+  opacity: 1; /* Make skills visible when the 'visible' class is added */
+  transform: translateY(0); /* Move skills back to their original position */
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.skills-list li:last-child {
+  margin-bottom: 0;
 }
