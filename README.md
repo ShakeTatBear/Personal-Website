@@ -25,3 +25,13 @@ node server.js
 
 The website should now be running on http://localhost:3000 (or whatever port you have configured in your server.js file).
 If not, please reach out to me at my email: joshalbrown@gmail.com
+
+##
+
+```
+## Notes
+- Emails.txt is a placeholder before I can implement the database to the site (testing functionality of the request to get emails).
+- Some javascript is noticeably in the code of my html, this was much easier for me in some instances to do live edits on the spot.
+- Although this page isn't multipage, I've left anchors on the page to direct the user to sections on the page. I thought this helped with the user experience.
+- Two dependencies are needed but included in the package.json
+- Likewise for navigation, I believe the nav bar/header will be much easier as soon as I change the existing code to move it across the page when navigating sections.
