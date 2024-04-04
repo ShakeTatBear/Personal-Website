@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files from the 'public' directory
+// Serve static files from the 'main' directory
 app.use(express.static('./', {
   setHeaders: (res, path) => {
     if (path.endsWith('.js')) {
