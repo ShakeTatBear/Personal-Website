@@ -1,0 +1,144 @@
+.low-poly-background {
+    padding: 0px 0px 0px 0px;
+    position: absolute; /* Change this to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fluctuate 10s infinite alternate;
+  }
+  
+  @keyframes fluctuate {
+      0% {
+          background-color: rgba(0, 0, 0, 0.99); /* Dark background */
+      }
+      50% {
+          background-color: rgba(0, 0, 0, 0.95); /* Intermediate darkness */
+      }
+      100% {
+          background-color: rgba(0, 0, 0, 0.92); /* Visible background */
+      }
+  }
+  
+  .about {
+    color: white; /* Set text color to white */
+    height: 100vh; /* Set height to viewport height */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .about-text {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 3.0s ease, transform 2.0s ease;
+  }
+  .about-text.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .img1{
+    width: 100%;
+    height: 800px;
+    transition: 0.5s;
+  }
+  
+  .img1:hover{
+    cursor: pointer;
+    scale: 1.025;
+    transition: 0.5s;
+  }
+  
+  
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: -1;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  /* Animation */
+  @keyframes move {
+    from {
+      transform: translateX(-50vh) rotate(0deg);
+    }
+    to {
+      transform: translateX(0vw) rotate(360deg);
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    75% { opacity: 0.2; }
+    95% { opacity: 1.0; }
+    100% { opacity: 0; }
+  }
+  
+  .about .main {
+    width: 50%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .about img{
+    margin-right: 20px; /* Adjust the margin-right as needed */
+    width: 80%; /* Adjust the width of the image */
+  }
+  
+  .about-text {
+    width: 50%;
+    text-align: center; /* Center align the text */
+  }
+  
+  .about-text h2 {
+    font-size: 4vw; /* Responsive font size based on viewport width */
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  
+  .about-text h5 {
+    font-size: 1.5em; /* Responsive font size based on em units */
+    margin-bottom: 1.5em; /* Adjust margin accordingly */
+    text-transform: capitalize;
+  }
+  
+  .about-text p {
+    font-size: 1em; /* Responsive font size based on em units */
+    letter-spacing: 0.05em; /* Adjust letter spacing */
+    line-height: 1.6;
+    margin-bottom: 2em; /* Adjust margin accordingly */
+  }
+  
+  button {
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    border: none; /* Remove the border */
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: .2s;
+  }
+  
+  button:hover {
+    background-color: transparent; /* Change the background color on hover */
+    border: 2px solid darkred; /* Add a border on hover */
+    cursor: pointer;
+  }
+  

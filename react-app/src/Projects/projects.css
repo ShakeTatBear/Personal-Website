@@ -1,0 +1,55 @@
+
+.projects-container {
+    text-align: center;
+    padding: 100px 200px;
+    animation: fluctuate 10s infinite alternate;
+  }
+  
+  @keyframes fluctuate {
+      0% {
+          background-color: rgba(0, 0, 0, 0.99); /* Dark background */
+      }
+      50% {
+          background-color: rgba(0, 0, 0, 0.95); /* Intermediate darkness */
+      }
+      100% {
+          background-color: rgba(0, 0, 0, 0.92); /* Visible background */
+      }
+  }
+  .project-list {
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .project-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  .project-title {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  
+  .project-description {
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+  }
+  
+  .project-link {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,179 @@
+*{
+color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+.image-rotate{
+    height: 100vh;
+    width: 100%;
+    filter: brightness(90%);
+    -webkit-filter: contrast(50px);
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(0.5);
+  }
+
+  
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+   /*  background-image: url(backgroundimage3.jpg);  backup */
+  }
+  
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    /* Adjust the rgba values as needed to get the desired darkness */
+    z-index: 999; /* Ensure the nav is on top of other content */
+  }
+
+  .hero-logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  
+  span {
+    color: darkred;
+  }
+  
+  nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+ 
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    
+  }
+  
+  nav ul li a:hover {
+    color: darkred;
+    transition: 0.4s;
+  }
+  
+  .btn {
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    align-content: center;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.2);
+  }
+
+  
+.content {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    align-content: center;
+    transform: translateY (-50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 25px;
+  }
+  
+  
+  /* Additional styles to create fading corners */
+  .content::before,
+  .content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+    z-index: -1;
+    border-radius: 40px; /* Adjust border-radius as needed */
+    overflow: hidden; 
+  }
+  
+  /* Left fading corner */
+  .content::before {
+    left: -20px; /* Adjust this value based on your design */
+    transform: rotate(45deg);
+  }
+  
+  /* Right fading corner */
+  .content::after {
+    right: -20px; /* Adjust this value based on your design */
+    transform: rotate(-45deg);
+  }
+  
+  h1 {
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+  }
+  
+  h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 45px;
+  }
+  
+  h4 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  .newsletter form {
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  .newsletter form input:first-child {
+    flex: 1;
+    width: auto;
+    padding: 14px 15px;
+    border: 2px solid darkred;
+    border-radius: 30px;
+    margin-right: 10px; /* Add some margin to separate the input and button */
+  }
+  
+  .newsletter form input:last-child {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .thanks-message {
+    font-family: 'Your Font', sans-serif; /* Replace 'Your Font' with your preferred font */
+    font-size: 40px; /* Adjust font size as needed */
+    color: white; /* Adjust color to match the website's theme */
+    margin-top: 10px; /* Add margin to separate it from the form */
+  }
