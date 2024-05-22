@@ -1,10 +1,14 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
 .low-poly-background {
-  padding: 0px 0px 0px 0px;
   position: absolute; /* Change this to fixed */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
   animation: fluctuate 10s infinite alternate;
 }
@@ -23,8 +27,6 @@
 
 .service {
     color: white;
-    min-height: 100vh; /* Set minimum height to viewport height */
-    width: 100%;
     top: 0;
     left: 0;
     display: flex;
@@ -34,17 +36,11 @@
     position: relative;
   }
   
-
-  
-  
-  
-  
   .particles {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 200%;
     z-index: -1;
   }
   
@@ -73,9 +69,7 @@
     100% { opacity: 0; }
   }
   
-  .title {
- 
-  }
+
   
 
   .title h2 {
@@ -129,7 +123,7 @@
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increase the box shadow */
     margin: 0 20px 40px; /* Increase bottom margin to separate cards */
-    padding: 40px; /* Increase padding for better spacing */
+    padding: 0px; /* Increase padding for better spacing */
     text-align: center;
     transition: transform 0.3s; /* Add transition effect */
     display: initial;

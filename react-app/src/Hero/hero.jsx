@@ -48,12 +48,12 @@ const HeroSection = () => {
         <img src={backgroundimage4} alt="Tech Background" className="image-rotate" />
         <nav>
           <h2 className="hero-logo">Portf<span>olio</span></h2>
-          <ul>
+          {/* <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#service">Services</a></li>
             <li><a href="#projects">Upcoming Projects</a></li>
-          </ul>
+          </ul> */}
           <a href="https://www.youtube.com/channel/UCerGQCBLMtyKpd8VOzZarFQ" className="btn">Subscribe</a>
         </nav>
       </div>

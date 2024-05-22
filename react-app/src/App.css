@@ -1,9 +1,17 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
 }
 
@@ -15,7 +23,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,4 +45,30 @@
   }
 }
 
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #800000; /* Dark Red */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #a00000; /* Slightly lighter red for hover */
+}
+
+button:active {
+  background-color: #600000; /* Darker red for active state */
+}
+
+button.previous {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
 
