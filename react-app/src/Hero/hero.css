@@ -34,8 +34,7 @@ html {
     padding-top: 0px;
     padding-left: 0;
     padding-right: 0;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-    /* Adjust the rgba values as needed to get the desired darkness */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)); /* Adjust the rgba values as needed to get the desired darkness */
     z-index: 999; /* Ensure the nav is on top of other content */
   }
 
@@ -90,7 +89,7 @@ html {
 .content {
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 35%;
     align-content: center;
     transform: translateY (-50%);
     background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
