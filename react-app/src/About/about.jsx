@@ -14,32 +14,7 @@ const AboutSection = () => {
       setCurrentImage(currentImage === image4 ? image3 : image4);
     };
   
-    // Effect for adding event listener on mount and cleanup on unmount
-    useEffect(() => {
-      const aboutText = document.querySelector('.about-text');
-  
-      const isInViewport = (elem) => {
-        const rect = elem.getBoundingClientRect();
-        return (
-          rect.top <= window.innerHeight && rect.bottom >= 0 // Check visibility
-        );
-      };
-  
-      const handleScroll = () => {
-        if (isInViewport(aboutText)) {
-          aboutText.classList.add('slide-in');
-        }
-      };
-  
-      // Add event listener
-      window.addEventListener('scroll', handleScroll);
-  
-      // Cleanup function
-      return () => window.removeEventListener('scroll', handleScroll);
 
-      
-    }, []); // Empty dependency array means the effect will only run once after the initial render
-  
 
   return (
     <section className="about" id="about">
@@ -64,7 +39,7 @@ const AboutSection = () => {
            Moreover, I'm keenly interested in automation techniques, exploring ways to streamline network management processes through scripting and automation tools, which 
            not only enhance efficiency but also deepen my understanding of networking fundamentals. I'm open to work any software or hardware engineering positions!
         </p>
-        <button type="button">Let's Talk</button>
+        <button className="button_lets_talk"type="button">Let's Talk</button>
       </div>
 
     </section>
