@@ -118,12 +118,12 @@ html, body {
   }
   
   .card {
-    width: 450px; /* Increase the width of the cards */
+    width: 500px; /* Increase the width of the cards */
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increase the box shadow */
     margin: 0 20px 40px; /* Increase bottom margin to separate cards */
-    padding: 0px; /* Increase padding for better spacing */
+    padding: 100px; /* Increase padding for better spacing */
     text-align: center;
     transition: transform 0.3s; /* Add transition effect */
     display: initial;

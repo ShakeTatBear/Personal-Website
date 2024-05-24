@@ -10,7 +10,7 @@ import ParticlesBackground from './ParticlesBackground';
 import './App.css';
 import './transitions.css';
 
-const sections = ['/', '/about', '/projects', '/services'];
+const sections = ['/', '/about', '/services', '/projects'];
 
 const App = () => {
   const location = useLocation();
@@ -48,7 +48,7 @@ const App = () => {
       </CSSTransition>
 
       </TransitionGroup>
-      <button onClick={goToNext}>Next</button>
+      <button className="nextButton" onClick={goToNext}>Next</button>
     </div>
   );
 };
