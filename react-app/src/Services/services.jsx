@@ -6,7 +6,9 @@ import { faCode, faPaintBrush, faMobileAlt, faMicrophoneAlt, faChartLine } from 
 
 const ServiceCard = ({ icon, title, description, link }) => {
   return (
+    
     <div className="card">
+
       <FontAwesomeIcon icon={icon} size="2x" />
       <h5>{title}</h5>
       <div className="pra">
@@ -21,10 +23,20 @@ const ServiceCard = ({ icon, title, description, link }) => {
 
 const ServicesSection = () => {
   return (
+    
     <section className="service" id="service">
+                          <nav>
+          <h2 className="hero-logo">Ser<span>vices</span></h2>
+          {/* <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#projects">Upcoming Projects</a></li>
+          </ul> */}
+          <a href="https://www.youtube.com/channel/UCerGQCBLMtyKpd8VOzZarFQ" className="btn">Subscribe</a>
+        </nav>
       <div className="low-poly-background"></div>
       <div className="title">
-        <h2>Services</h2>
       </div>
       
       <div className="box">

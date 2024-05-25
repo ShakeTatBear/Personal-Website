@@ -34,7 +34,16 @@ const ProjectsSection = () => {
 
   return (
     <div className="projects-container">
-      <h2 className="projects-title">My Projects</h2>
+                          <nav>
+          <h2 className="hero-logo">Pro<span>jects</span></h2>
+          {/* <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#projects">Upcoming Projects</a></li>
+          </ul> */}
+          <a href="https://www.youtube.com/channel/UCerGQCBLMtyKpd8VOzZarFQ" className="btn">Subscribe</a>
+        </nav>
       <ul className="project-list">
         {projects.map((project) => (
           <li key={project.id} className="project-item">

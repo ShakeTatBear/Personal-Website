@@ -3,223 +3,180 @@ html, body {
   margin: 0;
 }
 
-.low-poly-background {
-  position: absolute; /* Change this to fixed */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  animation: fluctuate 10s infinite alternate;
-}
-
-@keyframes fluctuate {
-  0% {
-      background-color: rgba(0, 0, 0, 0.99); /* Dark background */
-  }
-  50% {
-      background-color: rgba(0, 0, 0, 0.95); /* Intermediate darkness */
-  }
-  100% {
-      background-color: rgba(0, 0, 0, 0.92); /* Visible background */
-  }
-}
 
 .service {
-    color: white;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* Align content vertically */
-    z-index: -1;
-    position: relative;
-  }
-  
-  .particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-  
-  .particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: white;
-    border-radius: 50%;
-  }
-  
-  /* Animation */
-  @keyframes move {
-    from {
-      transform: translateX(-50vh) rotate(0deg);
-    }
-    to {
-      transform: translateX(0vw) rotate(360deg);
-    }
-  }
-  
-  @keyframes fadeInOut {
-    0% { opacity: 0; }
-    75% { opacity: 0.2; }
-    95% { opacity: 1.0; }
-    100% { opacity: 0; }
-  }
-  
+  color: white;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Align content vertically */
+  z-index: 1;
+  position: relative;
+}
 
-  
 
-  .title h2 {
-    font-size: 80px;
-    color: transparent; /* Set color to transparent */
-    background: linear-gradient(90deg, white, rgb(167, 167, 167)); /* Define initial gradient */
-    background-size: 600% 600%; /* Set background size to cover */
-    padding: 10px 20px;
-    border-radius: 20px;
-    
-    margin-bottom: 20px;
-    animation: gradientAnimation 4s ease infinite; /* Apply animation */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    background-clip: text;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); /* Add text shadow for visibility */
+/* Animation */
+@keyframes move {
+  from {
+    transform: translateX(-50vh) rotate(0deg);
   }
-  
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%; /* Initial background position */
-    }
-    50% {
-      background-position: 100% 50%; /* Move gradient to the right */
-    }
-    100% {
-      background-position: 0% 50%; /* Move gradient back to initial position */
-    }
+  to {
+    transform: translateX(0vw) rotate(360deg);
   }
-  
-  body, .container {
-    z-index: 0; /* Set to 0 or ensure it's lower than .particles */
-  }
+}
 
-  .standout-title {
-        color: white;
-        background-color: darkred;
-        padding: 10px 20px;
-        border-radius: 5px;
-      }
-  
-  .box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    margin-top: 20px; /* Add margin between card rows */
-  }
-  
-  .card {
-    width: 500px; /* Increase the width of the cards */
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increase the box shadow */
-    margin: 0 20px 40px; /* Increase bottom margin to separate cards */
-    padding: 100px; /* Increase padding for better spacing */
-    text-align: center;
-    transition: transform 0.3s; /* Add transition effect */
-    display: initial;
-  /* Add transition effect for opacity */
-  }
-  
-  
-  .card:hover {
-    transform: scale(1.05); /* Enlarge the card on hover */
-  }
-  
-  .card i {
-    font-size: 64px; /* Increase the size of the icon */
-    color: darkred;
-  }
-  
-  .card h5 {
-    font-size: 24px; /* Increase the size of the heading */
-    margin-top: 20px;
-    color: #333; /* Change the color of the heading */
-  }
-  
-  .card .pra {
-    margin-top: 20px;
-  }
-  
-  .card p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 18px; /* Increase the font size of the paragraph */
-  }
-  
-  .card a.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 30px; /* Increase the padding of the button */
-    background-color: black;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px; /* Increase the font size of the button */
-  }
-  
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  75% { opacity: 0.2; }
+  95% { opacity: 1.0; }
+  100% { opacity: 0; }
+}
 
-  .slide-in .card {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s, transform 0.5s;
-  }
-  
-  .slide-in .card.hidden {
-    opacity: 0;
-    transform: translateY(50px); /* Adjust as needed */
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .skills {
-    background-color: #131212;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-    min-height: 100vh; /* Ensure the section covers at least the viewport height */
-    position: relative; /* Add position relative */
-  }
-  
-  .skills h2 {
-    font-size: 40px;
-    margin-bottom: 50px;
-  }
-  
-  .skills-container {
-    opacity: 0; /* Initially hide the skills */
-    transform: translateY(50px); /* Initially move the skills down */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth animation */
-  }
-  
-  .skills.visible .skills-container {
-    opacity: 1; /* Make skills visible when the 'visible' class is added */
-    transform: translateY(0); /* Move skills back to their original position */
-  }
-  
-  .skills-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .skills-list li {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .skills-list li:last-child {
-    margin-bottom: 0;
-  }
+.title h2 {
+  font-size: 80px;
+  color: transparent; /* Set color to transparent */
+  background: linear-gradient(90deg, white, rgb(167, 167, 167)); /* Define initial gradient */
+  background-size: 600% 600%; /* Set background size to cover */
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  animation: gradientAnimation 4s ease infinite; /* Apply animation */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); /* Add text shadow for visibility */
+}
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%; /* Initial background position */
+  }
+  50% {
+    background-position: 100% 50%; /* Move gradient to the right */
+  }
+  100% {
+    background-position: 0% 50%; /* Move gradient back to initial position */
+  }
+}
+
+body, .container {
+  z-index: 0; /* Set to 0 or ensure it's lower than .particles */
+}
+
+.standout-title {
+  color: white;
+  background-color: darkred;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  margin-top: 200px; /* Add margin between card rows */
+}
+
+.card {
+  width: 500px; /* Increase the width of the cards */
+  background-color: rgb(255, 255, 255);
+  opacity: 0.9;
+  border-radius: 80px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increase the box shadow */
+  margin: 0 40px 80px; /* Increase bottom margin to separate cards */
+  padding: 85px; /* Increase padding for better spacing */
+  text-align: center;
+  transition: transform 0.3s; /* Add transition effect */
+  display: initial;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+.card i {
+  font-size: 64px; /* Increase the size of the icon */
+  color: darkred;
+}
+
+.card h5 {
+  font-size: 24px; /* Increase the size of the heading */
+  margin-top: 20px;
+  color: #333; /* Change the color of the heading */
+}
+
+.card .pra {
+  margin-top: 20px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 18px; /* Increase the font size of the paragraph */
+}
+
+.card a.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px; /* Increase the padding of the button */
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px; /* Increase the font size of the button */
+}
+
+.slide-in .card {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-in .card.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Adjust as needed */
+}
+
+.hidden {
+  display: none;
+}
+
+.skills {
+  background-color: #131212;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  min-height: 100vh; /* Ensure the section covers at least the viewport height */
+  position: relative; /* Add position relative */
+}
+
+.skills h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.skills-container {
+  opacity: 0; /* Initially hide the skills */
+  transform: translateY(50px); /* Initially move the skills down */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth animation */
+}
+
+.skills.visible .skills-container {
+  opacity: 1; /* Make skills visible when the 'visible' class is added */
+  transform: translateY(0); /* Move skills back to their original position */
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.skills-list li:last-child {
+  margin-bottom: 0;
+}

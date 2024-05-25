@@ -5,7 +5,7 @@ import * as THREE from 'three';
 const Particles = () => {
   const points = useRef();
   const { mouse, camera } = useThree();
-  const particlesCount = 4000;
+  const particlesCount = 4500;
 
   // State to hold velocities
   const velocities = useMemo(() => {
@@ -19,7 +19,7 @@ const Particles = () => {
   const positions = useMemo(() => {
     const positions = new Float32Array(particlesCount * 3);
     for (let i = 0; i < particlesCount * 3; i++) {
-      positions[i] = (Math.random() - 0.5) * 90;
+      positions[i] = (Math.random() - 0.5) * 80;
     }
     return positions;
   }, [particlesCount]);
@@ -37,7 +37,7 @@ const Particles = () => {
 
   useFrame(() => {
     if (points.current) {
-      points.current.rotation.y += 0.001;
+      points.current.rotation.y += 0.002;
 
       raycaster.setFromCamera(mouse, camera);
       const intersects = raycaster.intersectObject(points.current);
@@ -80,7 +80,7 @@ const Particles = () => {
           itemSize={3}
         />
       </bufferGeometry>
-      <pointsMaterial color="#ffffff" size={0.1} />
+      <pointsMaterial color="#ffffff" size={0.05} />
     </points>
   );
 };
